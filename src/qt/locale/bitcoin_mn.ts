@@ -130,8 +130,8 @@
         <translation>Оношилгоо ба засварын консолыг онгойлго</translation>
     </message>
     <message>
-        <source>Litecoin</source>
-        <translation>Litecoin</translation>
+        <source>NiftyCoin</source>
+        <translation>NiftyCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -233,8 +233,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Litecoin</source>
-        <translation>Litecoin</translation>
+        <source>NiftyCoin</source>
+        <translation>NiftyCoin</translation>
     </message>
     <message>
         <source>Error</source>
