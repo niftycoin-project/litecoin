@@ -1,41 +1,41 @@
-Litecoin Core
+NiftyCoin Core
 =============
 
 Setup
 ---------------------
-Litecoin Core is the original Litecoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Litecoin transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+NiftyCoin Core is the original NiftyCoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of NiftyCoin transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Litecoin Core, visit [litecoin.org](https://litecoin.org).
+To download NiftyCoin Core, visit [niftycoin.org](https://niftycoin.org).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Litecoin on your native platform.
+The following are some helpful notes on how to run NiftyCoin on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/litecoin-qt` (GUI) or
-- `bin/litecoind` (headless)
+- `bin/niftycoin-qt` (GUI) or
+- `bin/niftycoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run litecoin-qt.exe.
+Unpack the files into a directory, and then run niftycoin-qt.exe.
 
 ### OS X
 
-Drag Litecoin-Core to your applications folder, and then run Litecoin-Core.
+Drag NiftyCoin-Core to your applications folder, and then run NiftyCoin-Core.
 
 ### Need Help?
 
-* See the documentation at the [Litecoin Wiki](https://litecoin.info/)
+* See the documentation at the [NiftyCoin Wiki](https://niftycoin.info/)
 for help and more information.
-* Ask for help on [#litecoin](http://webchat.freenode.net?channels=litecoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=litecoin).
-* Ask for help on the [LitecoinTalk](https://litecointalk.io/) forums.
+* Ask for help on [#niftycoin](http://webchat.freenode.net?channels=niftycoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=niftycoin).
+* Ask for help on the [NiftyCoinTalk](https://niftycointalk.io/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build Litecoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build NiftyCoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -45,12 +45,12 @@ The following are developer notes on how to build Litecoin on your native platfo
 
 Development
 ---------------------
-The Litecoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The NiftyCoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://dev.visucore.com/litecoin/doxygen/)
+- [Source Code Documentation (External Link)](https://dev.visucore.com/niftycoin/doxygen/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [Travis CI](travis-ci.md)
@@ -61,8 +61,8 @@ The Litecoin repo's [root README](/README.md) contains relevant information on t
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [LitecoinTalk](https://litecointalk.io/) forums.
-* Discuss general Litecoin development on #litecoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=litecoin-dev).
+* Discuss on the [NiftyCoinTalk](https://niftycointalk.io/) forums.
+* Discuss general NiftyCoin development on #niftycoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=niftycoin-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
