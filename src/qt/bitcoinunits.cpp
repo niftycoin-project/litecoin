@@ -42,10 +42,10 @@ QString BitcoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("NFY");
-    case mBTC: return QString("niftydollars");
-    case uBTC: return QString("niftycents");
-    case SAT: return QString("niftoshi");
+    case BTC: return QString("Nifties");
+    case mBTC: return QString("NiftyDollars");
+    case uBTC: return QString("NiftyCents");
+    case SAT: return QString("Niftoshis");
     default: return QString("???");
     }
 }
