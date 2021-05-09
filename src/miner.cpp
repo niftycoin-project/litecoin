@@ -215,8 +215,11 @@ bool BlockAssembler::TestPackageTransactions(const CTxMemPool::setEntries& packa
     for (CTxMemPool::txiter it : package) {
         if (!IsFinalTx(it->GetTx(), nHeight, nLockTimeCutoff))
             return false;
-        if (!fIncludeWitness && it->GetTx().HasWitness())
+        if (!fIncludeWitness && it->GetTx().HasWitness()) { 
+            // PIN - segwit stuck in mempool issues. Here is where the problem is, transaction rejected! I have added this debug code.
+            LogPrintf("TestPackageTransactions !fIncludeWitness %i\n",nHeight);
             return false;
+        } 
     }
     return true;
 }
