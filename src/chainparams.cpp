@@ -110,7 +110,14 @@ public:
             "startTime": 0,
             "timeout": 999999999999,
             "since": 8064,
-           }
+            "statistics": {
+              "period": 8064,
+              "threshold": 6048,
+              "elapsed": 3120,
+              "count": 3120,
+              "possible": true
+            }
+          }
         */
 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
@@ -180,9 +187,9 @@ public:
         checkpointData = {
             {
                 { 0,     uint256S("0x1bff4bbd83f4cb3fc8341cf2b258da0777b38a1f567ca2dd56367e84d2402d9d")},
-                { 2000,  uint256S("0xfae783f593105c8e9343f944a546f0dd7324df3efe0e2428a364ea27578b4e3d")},
-                { 4477,  uint256S("0x5fa0b0472ed3604c8ff179a98767bc1557291e71a17866e06c28bc9d64e236f4")},
-                { 10712, uint256S("0x6b8fb2515be4d9a0c3ad1fa1d2d208b36d51a8137d02b65d225b04e832ca14da")},
+                //{ 2000,  uint256S("0xfae783f593105c8e9343f944a546f0dd7324df3efe0e2428a364ea27578b4e3d")},
+                //{ 4477,  uint256S("0x5fa0b0472ed3604c8ff179a98767bc1557291e71a17866e06c28bc9d64e236f4")},
+                //{ 10712, uint256S("0x6b8fb2515be4d9a0c3ad1fa1d2d208b36d51a8137d02b65d225b04e832ca14da")},
             }
         };
 
