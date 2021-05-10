@@ -134,11 +134,33 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
 
+        /* To find nMinimumChainWork and defaultAssumeValid we need data from rpc (using blockhash at 10712)
+           niftycoin-cli getblockheader 6b8fb2515be4d9a0c3ad1fa1d2d208b36d51a8137d02b65d225b04e832ca14da
+           {
+             "hash": "6b8fb2515be4d9a0c3ad1fa1d2d208b36d51a8137d02b65d225b04e832ca14da",
+             "confirmations": 494,
+             "height": 10712,
+             "version": 805306371,
+             "versionHex": "30000003",
+             "merkleroot": "6671ac2188df6fc4b3280ca4789c108d4c4a77a89e9bac344a0318b047eef1ca",
+             "time": 1620305032,
+             "mediantime": 1620299970,
+             "nonce": 233243808,
+             "bits": "1d01d960",
+             "difficulty": 0.5407892130974387,
+             "chainwork": "0000000000000000000000000000000000000000000000000000081c95fb7049",
+             "nTx": 2,
+             "previousblockhash": "3792a6228111a58c560b6bb2b6610e2bac4196c12632dce90b88faeaf74db8de",
+             "nextblockhash": "abc66f30704f7e8e139b452580eaf76c1bb56058bd92997a521407a7dcdf27b0"
+           }
+       */
+
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000081c95fb7049");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x00");
+        // height: 10712
+        consensus.defaultAssumeValid = uint256S("0x6b8fb2515be4d9a0c3ad1fa1d2d208b36d51a8137d02b65d225b04e832ca14da");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -187,16 +209,28 @@ public:
         checkpointData = {
             {
                 { 0,     uint256S("0x1bff4bbd83f4cb3fc8341cf2b258da0777b38a1f567ca2dd56367e84d2402d9d")},
-                //{ 2000,  uint256S("0xfae783f593105c8e9343f944a546f0dd7324df3efe0e2428a364ea27578b4e3d")},
-                //{ 4477,  uint256S("0x5fa0b0472ed3604c8ff179a98767bc1557291e71a17866e06c28bc9d64e236f4")},
-                //{ 10712, uint256S("0x6b8fb2515be4d9a0c3ad1fa1d2d208b36d51a8137d02b65d225b04e832ca14da")},
+                { 2000,  uint256S("0xfae783f593105c8e9343f944a546f0dd7324df3efe0e2428a364ea27578b4e3d")},
+                { 4477,  uint256S("0x5fa0b0472ed3604c8ff179a98767bc1557291e71a17866e06c28bc9d64e236f4")},
+                { 10712, uint256S("0x6b8fb2515be4d9a0c3ad1fa1d2d208b36d51a8137d02b65d225b04e832ca14da")},
             }
         };
 
         chainTxData = ChainTxData{
-            /* nTime    */ 1614638965,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0.0
+            /* Data from rpc (using blockhash at 10712)
+               niftycoin-cli getchaintxstats 4096 6b8fb2515be4d9a0c3ad1fa1d2d208b36d51a8137d02b65d225b04e832ca14da
+               {
+                 "time": 1620305032,
+                 "txcount": 10979,
+                 "window_final_block_hash": "6b8fb2515be4d9a0c3ad1fa1d2d208b36d51a8137d02b65d225b04e832ca14da",
+                 "window_block_count": 4096,
+                 "window_tx_count": 4178,
+                 "window_interval": 2388755,
+                 "txrate": 0.001749028259490823
+                }
+             */
+            /* nTime    */ 1620305032,
+            /* nTxCount */ 10979,
+            /* dTxRate  */ 0.001749028259490823
         };
 
         /* disable fallback fee on mainnet */
