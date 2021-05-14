@@ -495,6 +495,12 @@ static UniValue getblocktemplate(const JSONRPCRequest& request)
     // don't).
     bool fSupportsSegwit = setClientRules.find(segwit_info.name) != setClientRules.end();
 
+    // PIN: Added segwit check from LiteCoin 0.18
+    // GBT must be called with 'segwit' set in the rules
+    if (setClientRules.count(segwit_info.name) != 1) {
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "getblocktemplate must be called with the segwit rule set (call with {\"rules\": [\"segwit\"]})");
+    }
+
     // Update block
     static CBlockIndex* pindexPrev;
     static int64_t nStart;
