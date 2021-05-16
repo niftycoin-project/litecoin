@@ -318,7 +318,7 @@ void BlockAssembler::addPackageTxs(int &nPackagesSelected, int &nDescendantsUpda
     // Keep track of entries that failed inclusion, to avoid duplicate work
     CTxMemPool::setEntries failedTx;
 
-    LogPrintf("AddPackageTxs: fentering ...\n");
+    LogPrintf("AddPackageTxs: Entering ...\n");
 
     // Start by adding all descendants of previously added txs to mapModifiedTx
     // and modifying them for their already included ancestors
