@@ -495,8 +495,10 @@ static UniValue getblocktemplate(const JSONRPCRequest& request)
     // don't).
     bool fSupportsSegwit = setClientRules.find(segwit_info.name) != setClientRules.end();
 
-    // PIN: Debug segwit check
-    LogPrintf("getblocktemplate -> fSupportsSegwit: %d\n", fSupportsSegwit);
+    if (!fSupportsSegwit) {
+      // PIN: If not segwit - output
+      LogPrintf("getblocktemplate -> fSupportsSegwit: %d, segwit_info.name: %s\n", fSupportsSegwit, segwit_info.name);
+    }
 
     // Update block
     static CBlockIndex* pindexPrev;
