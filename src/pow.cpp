@@ -85,6 +85,7 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
     if (bnNew > bnPowLimit)
         bnNew = bnPowLimit;
 
+    LogPrintf("CalculateNextWorkRequired %s %i \n", bnNew.ToString().c_str(), bnNew.GetCompact());
     return bnNew.GetCompact();
 }
 
