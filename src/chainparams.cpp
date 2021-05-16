@@ -85,7 +85,7 @@ public:
         consensus.nPowTargetSpacing = 10 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
-        consensus.nRuleChangeActivationThreshold = 6048; // originally 6048, which is 75% of 8064
+        consensus.nRuleChangeActivationThreshold = 3024; // originally 6048, which is 75% of 8064
         consensus.nMinerConfirmationWindow = 8064; // nPowTargetTimespan / nPowTargetSpacing * 4
 
         /**
@@ -121,19 +121,19 @@ public:
         */
 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1609491600; // Fri Jan 01 2021 09:00:00 GMT+0000
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1622361600; // Sun May 30 2021 08:00:00 GMT+0000
 
         // Deployment of BIP68, BIP112, and BIP113.
         // XXX: BIP heights and hashes all need to be updated to Niftycoin values
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1609491600; // Fri Jan 01 2021 09:00:00 GMT+0000
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1622361600; // Sun May 30 2021 08:00:00 GMT+0000
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1609491600; // Fri Jan 01 2021 09:00:00 GMT+0000
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1622361600; // Sun May 30 2021 08:00:00 GMT+0000
 
         /* To find nMinimumChainWork and defaultAssumeValid we need data from rpc (using blockhash at 10712)
            niftycoin-cli getblockheader 6b8fb2515be4d9a0c3ad1fa1d2d208b36d51a8137d02b65d225b04e832ca14da
